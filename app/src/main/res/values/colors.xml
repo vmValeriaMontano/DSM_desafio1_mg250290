@@ -5,4 +5,6 @@
     <color name="salario_bruto">#1976D2</color> <!-- Azul -->
     <color name="salario_neto">#388E3C</color>  <!-- Verde -->
     <color name="descuento">#D32F2F</color>     <!-- Rojo -->
+
+    <color name="historial_texto">#555555</color> <!-- Gris Oscuro -->
 </resources>

@@ -18,6 +18,9 @@ class CalculadoraActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calculadora)
 
+        val btnVerHistorial = findViewById<Button>(R.id.btnVerHistorial)
+        val tvHistorialCompleto = findViewById<TextView>(R.id.tvHistorialCompleto)
+
         val etNum1 = findViewById<EditText>(R.id.etNum1)
         val etNum2 = findViewById<EditText>(R.id.etNum2)
         val tvResultado = findViewById<TextView>(R.id.tvResultadoCalc)
@@ -29,6 +32,15 @@ class CalculadoraActivity : AppCompatActivity() {
         val btnExp = findViewById<Button>(R.id.btnExp)
         val btnRaiz = findViewById<Button>(R.id.btnRaiz)
         val btnVolver = findViewById<Button>(R.id.btnVolverCalc)
+
+        btnVerHistorial.setOnClickListener {
+            val textoHistorial = leerHistorial()
+            if (textoHistorial.isEmpty()) {
+                tvHistorialCompleto.text = "El historial está vacío."
+            } else {
+                tvHistorialCompleto.text = "Historial Guardado:\n\n$textoHistorial"
+            }
+        }
 
         btnVolver.setOnClickListener { finish() }
 
@@ -106,12 +118,23 @@ class CalculadoraActivity : AppCompatActivity() {
         }
     }
 
+    // Funcion para el historial
+    private fun leerHistorial(): String {
+        return try {
+            openFileInput(ARCHIVO_HISTORIAL).bufferedReader().use { reader ->
+                reader.readText() // Lee el archivo
+            }
+        } catch (e: Exception) {
+            // Si no hay nada, devuelve un texto vacío
+            ""
+        }
+    }
     private fun mostrarYGuardar(operacion: String, resultado: Double, tv: TextView) {
         tv.text = "Resultado: $resultado"
         guardarEnHistorial(operacion)
     }
 
-    // Persistencia Interna 
+    // Persistencia Interna
     private fun guardarEnHistorial(registro: String) {
         try {
             val linea = "$registro\n"

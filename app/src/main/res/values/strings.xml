@@ -31,4 +31,8 @@
     <string name="hint_num2">Número 2</string>
     <string name="err_div_zero">No se puede dividir entre cero</string>
     <string name="err_raiz_negativa">No se puede calcular raíz de un negativo</string>
+
+    <!-- HISTORIAL de calculadora -->
+    <string name="btn_ver_historial">Ver Historial</string>
+
 </resources>
