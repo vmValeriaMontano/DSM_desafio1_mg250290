@@ -1,25 +1,53 @@
 package com.example.desafio1_dsm
 
+import android.Manifest
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
+import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
+import androidx.core.content.ContextCompat
 import java.text.DecimalFormat
 
 class PromedioActivity : AppCompatActivity() {
 
     //uso de CHANNEL_ID para decirle
-    //al usuario que se calculó su nota
+    //al usuario que se calculo su nota
     private val CHANNEL_ID = "canal_promedio"
 
+    //Objeto que espera la respuesta del usuario al cartel de permiso
+    private val requestPermissionLauncher = registerForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { isGranted: Boolean ->
+        if (isGranted) {
+            Toast.makeText(this, "Permiso de notificaciones concedido", Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(this, "No recibirás notificaciones", Toast.LENGTH_LONG).show()
+        }
+    }
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        // Revisamos el permiso
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS)
+                != PackageManager.PERMISSION_GRANTED) {
+
+                // Si no tiene el permiso, lanzamos el cartel flotante
+                requestPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+            }
+        }
+
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_promedio)
 
@@ -106,4 +134,5 @@ class PromedioActivity : AppCompatActivity() {
         val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         notificationManager.notify(1, builder.build())
     }
+
 }
