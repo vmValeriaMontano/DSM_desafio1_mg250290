@@ -11,21 +11,21 @@
 
     <!--Creacion de Botones principales-->
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/Promediobtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Botón 1" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/Salariobtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Botón 2" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/Calculadorabtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"

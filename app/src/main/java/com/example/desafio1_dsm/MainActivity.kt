@@ -10,9 +10,9 @@ import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var btn1: Button
-    private lateinit var btn2: Button
-    private lateinit var btn3: Button
+    private lateinit var btnEjercicio1: Button
+    private lateinit var btnEjercicio2: Button
+    private lateinit var btnEjercicio3: Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,24 +24,24 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        btn1 = findViewById(R.id.button1)
-        btn2 = findViewById(R.id.button2)
-        btn3 = findViewById(R.id.button3)
+        btnEjercicio1 = findViewById(R.id.Promediobtn)
+        btnEjercicio2 = findViewById(R.id.Salariobtn)
+        btnEjercicio3 = findViewById(R.id.Calculadorabtn)
 
-        btn1.setOnClickListener {
+        btnEjercicio1.setOnClickListener {
             // Acción para el Botón 1
             val ir= Intent(this, Promedio::class.java)
             startActivity(ir)
         }
 
-        btn2.setOnClickListener {
+        btnEjercicio2.setOnClickListener {
             // Acción para el Botón 2
             val ir= Intent(this, Descuentos::class.java)
             startActivity(ir)
 
         }
 
-        btn3.setOnClickListener {
+        btnEjercicio3.setOnClickListener {
             // Acción para el Botón 3
             val ir= Intent(this, Calculadora::class.java)
             startActivity(ir)
