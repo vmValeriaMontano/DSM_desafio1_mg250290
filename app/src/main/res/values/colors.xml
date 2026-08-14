@@ -2,4 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="salario_bruto">#1976D2</color> <!-- Azul -->
+    <color name="salario_neto">#388E3C</color>  <!-- Verde -->
+    <color name="descuento">#D32F2F</color>     <!-- Rojo -->
 </resources>
