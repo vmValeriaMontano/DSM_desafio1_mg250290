@@ -1,20 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SalarioActivity">
+    android:padding="@dimen/padding_standard">
 
-    <!--Prueba de funcionalidad-->
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="DESCUENTOS"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title_salario"
+            android:textSize="@dimen/text_size_title"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/margin_medium"/>
+
+        <EditText
+            android:id="@+id/etNombreEmpleado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_nombre_empleado"
+            android:inputType="textPersonName"/>
+
+        <EditText
+            android:id="@+id/etSalarioBase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_salario_base"
+            android:inputType="numberDecimal"/>
+
+        <Button
+            android:id="@+id/btnCalcularSalario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_calcular"
+            android:layout_marginTop="@dimen/margin_medium"/>
+
+        <TextView
+            android:id="@+id/tvSalarioBruto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/salario_bruto"
+            android:textSize="18sp"
+            android:layout_marginTop="12dp"/>
+
+        <TextView
+            android:id="@+id/tvDescuentos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/descuento"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/tvSalarioNeto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/salario_neto"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"/>
+
+        <Button
+            android:id="@+id/btnVolverSalario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_volver"
+            android:layout_marginTop="@dimen/margin_medium"/>
+
+    </LinearLayout>
+</ScrollView>
