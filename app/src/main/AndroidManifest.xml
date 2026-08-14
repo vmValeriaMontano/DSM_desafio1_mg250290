@@ -12,13 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Desafio1_DSM">
         <activity
-            android:name=".Calculadora"
+            android:name=".CalculadoraActivity"
             android:exported="false" />
         <activity
-            android:name=".Descuentos"
+            android:name=".SalarioActivity"
             android:exported="false" />
         <activity
-            android:name=".Promedio"
+            android:name=".PromedioActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

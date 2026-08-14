@@ -30,20 +30,20 @@ class MainActivity : AppCompatActivity() {
 
         btnEjercicio1.setOnClickListener {
             // Acción para el Botón 1
-            val ir= Intent(this, Promedio::class.java)
+            val ir= Intent(this, PromedioActivity::class.java)
             startActivity(ir)
         }
 
         btnEjercicio2.setOnClickListener {
             // Acción para el Botón 2
-            val ir= Intent(this, Descuentos::class.java)
+            val ir= Intent(this, SalarioActivity::class.java)
             startActivity(ir)
 
         }
 
         btnEjercicio3.setOnClickListener {
             // Acción para el Botón 3
-            val ir= Intent(this, Calculadora::class.java)
+            val ir= Intent(this, CalculadoraActivity::class.java)
             startActivity(ir)
 
         }
