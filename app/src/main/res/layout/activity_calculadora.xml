@@ -35,18 +35,52 @@
 
         <!-- Grid para los botones de las operaciones -->
         <GridLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:columnCount="3"
             android:rowCount="2"
             android:layout_marginTop="@dimen/margin_medium">
 
-            <Button android:id="@+id/btnSuma" android:text="+" />
-            <Button android:id="@+id/btnResta" android:text="-" />
-            <Button android:id="@+id/btnMulti" android:text="*" />
-            <Button android:id="@+id/btnDiv" android:text="/" />
-            <Button android:id="@+id/btnExp" android:text="x^y" />
-            <Button android:id="@+id/btnRaiz" android:text="√x" />
+            <ImageButton
+                android:id="@+id/btnSuma"
+                android:layout_width="@dimen/tamanio_boton_calc"
+                android:layout_height="@dimen/tamanio_boton_calc"
+                android:src="@drawable/suma"
+                android:scaleType="fitCenter"/>
+            <ImageButton
+                android:id="@+id/btnResta"
+                android:layout_width="@dimen/tamanio_boton_calc"
+                android:layout_height="@dimen/tamanio_boton_calc"
+                android:src="@drawable/resta"
+                android:scaleType="fitCenter"/>
+
+            <ImageButton
+                android:id="@+id/btnMulti"
+                android:layout_width="@dimen/tamanio_boton_calc"
+                android:layout_height="@dimen/tamanio_boton_calc"
+                android:src="@drawable/multiplicacion"
+                android:scaleType="fitCenter"/>
+
+            <ImageButton
+                android:id="@+id/btnDiv"
+                android:layout_width="@dimen/tamanio_boton_calc"
+                android:layout_height="@dimen/tamanio_boton_calc"
+                android:src="@drawable/division"
+                android:scaleType="fitCenter"/>
+
+            <ImageButton
+                android:id="@+id/btnExp"
+                android:layout_width="@dimen/tamanio_boton_calc"
+                android:layout_height="@dimen/tamanio_boton_calc"
+                android:src="@drawable/exponente"
+                android:scaleType="fitCenter"/>
+
+            <ImageButton
+                android:id="@+id/btnRaiz"
+                android:layout_width="@dimen/tamanio_boton_calc"
+                android:layout_height="@dimen/tamanio_boton_calc"
+                android:src="@drawable/raiz"
+                android:scaleType="fitCenter"/>
         </GridLayout>
 
         <TextView
@@ -79,6 +113,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium"
             android:text="@string/btn_volver" />
 
     </LinearLayout>

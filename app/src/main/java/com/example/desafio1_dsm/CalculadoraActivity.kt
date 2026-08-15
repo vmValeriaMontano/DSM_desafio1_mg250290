@@ -4,6 +4,7 @@ import android.content.Context
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -25,12 +26,12 @@ class CalculadoraActivity : AppCompatActivity() {
         val etNum2 = findViewById<EditText>(R.id.etNum2)
         val tvResultado = findViewById<TextView>(R.id.tvResultadoCalc)
 
-        val btnSuma = findViewById<Button>(R.id.btnSuma)
-        val btnResta = findViewById<Button>(R.id.btnResta)
-        val btnMulti = findViewById<Button>(R.id.btnMulti)
-        val btnDiv = findViewById<Button>(R.id.btnDiv)
-        val btnExp = findViewById<Button>(R.id.btnExp)
-        val btnRaiz = findViewById<Button>(R.id.btnRaiz)
+        val btnSuma = findViewById<ImageButton>(R.id.btnSuma)
+        val btnResta = findViewById<ImageButton>(R.id.btnResta)
+        val btnMulti = findViewById<ImageButton>(R.id.btnMulti)
+        val btnDiv = findViewById<ImageButton>(R.id.btnDiv)
+        val btnExp = findViewById<ImageButton>(R.id.btnExp)
+        val btnRaiz = findViewById<ImageButton>(R.id.btnRaiz)
         val btnVolver = findViewById<Button>(R.id.btnVolverCalc)
 
         btnVerHistorial.setOnClickListener {
