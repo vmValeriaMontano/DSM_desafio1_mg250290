@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="@color/rosa_pastel"
     tools:context=".MainActivity">
 
     <TextView
@@ -15,6 +16,9 @@
         android:text="@string/tittle_principal"
         android:layout_marginLeft="@dimen/margin_small"
         android:layout_marginRight="@dimen/margin_small"
+        android:textColor="@color/texto_titulo"
+        android:textStyle="bold"
+        android:gravity="center"
         android:textSize="@dimen/text_size_title"
         />
 
@@ -24,6 +28,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_medium"
+        android:backgroundTint="@color/rosa_principal"
+        android:textColor="@color/texto_botones"
         android:text="@string/btn_ejercicio1" />
 
     <Button
@@ -31,12 +37,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_medium"
-        android:text="@string/btn_ejercicio2" />
+        android:text="@string/btn_ejercicio2"
+        android:backgroundTint="@color/rosa_encendido"
+        android:textColor="@color/texto_botones"/>
 
     <Button
         android:id="@+id/Calculadorabtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_medium"
-        android:text="@string/btn_ejercicio3" />
+        android:text="@string/btn_ejercicio3"
+        android:backgroundTint="@color/magenta_suave"
+        android:textColor="@color/texto_botones" />
 </LinearLayout>

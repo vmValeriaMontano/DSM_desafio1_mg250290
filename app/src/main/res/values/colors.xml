@@ -7,4 +7,11 @@
     <color name="descuento">#D32F2F</color>     <!-- Rojo -->
 
     <color name="historial_texto">#555555</color> <!-- Gris Oscuro -->
+
+    <color name="rosa_pastel">#FFE3B3</color>       <!-- Fondo suave para toda la pantalla -->
+    <color name="rosa_principal">#C6DF76</color>    <!-- Rosa suave (Botón 1) -->
+    <color name="rosa_encendido">#FE72A9</color>    <!-- Rosa más alegre (Botón 2) -->
+    <color name="magenta_suave">#DD4470</color>     <!-- Rosa lila elegante (Botón 3) -->
+    <color name="texto_botones">#FFFFFFFF</color>   <!-- Texto blanco para que resalte -->
+    <color name="texto_titulo">#5A3E45</color>      <!-- Café/Rosa oscuro muy elegante para el título -->
 </resources>
