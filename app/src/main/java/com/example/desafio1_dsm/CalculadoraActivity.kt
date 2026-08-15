@@ -1,7 +1,11 @@
 package com.example.desafio1_dsm
 
 import android.content.Context
+import android.os.Build
 import android.os.Bundle
+import android.os.VibrationEffect
+import android.os.Vibrator
+import android.os.VibratorManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
@@ -52,6 +56,7 @@ class CalculadoraActivity : AppCompatActivity() {
             //Verificamos que no existan valores vacios
             if (txt1.isEmpty()) {
                 etNum1.error = getString(R.string.err_campo_vacio)
+                vibrarDispositivo()
                 return null
             }
             val n1 = txt1.toDouble()
@@ -60,6 +65,7 @@ class CalculadoraActivity : AppCompatActivity() {
 
             if (txt2.isEmpty()) {
                 etNum2.error = getString(R.string.err_campo_vacio)
+                vibrarDispositivo()
                 return null
             }
             val n2 = txt2.toDouble()
@@ -122,6 +128,7 @@ class CalculadoraActivity : AppCompatActivity() {
     // Funcion para el historial
     private fun leerHistorial(): String {
         return try {
+            //interno NO require permiso
             openFileInput(ARCHIVO_HISTORIAL).bufferedReader().use { reader ->
                 reader.readText() // Lee el archivo
             }
@@ -144,6 +151,18 @@ class CalculadoraActivity : AppCompatActivity() {
             }
         } catch (e: Exception) {
             e.printStackTrace()
+        }
+    }
+    private fun vibrarDispositivo() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            val vibratorManager = getSystemService(Context.VIBRATOR_MANAGER_SERVICE) as VibratorManager
+            val vibrator = vibratorManager.defaultVibrator
+            vibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE))
+        } else {
+            @Suppress("DEPRECATION")
+            val vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+            @Suppress("DEPRECATION")
+            vibrator.vibrate(300)
         }
     }
 }

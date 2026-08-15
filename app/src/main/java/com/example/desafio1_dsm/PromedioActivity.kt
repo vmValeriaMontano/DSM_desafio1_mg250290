@@ -7,6 +7,9 @@ import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
+import android.os.VibrationEffect
+import android.os.Vibrator
+import android.os.VibratorManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -74,6 +77,7 @@ class PromedioActivity : AppCompatActivity() {
             //Verificar que no este vacio y evitar errores
             if (nombre.isEmpty()) {
                 etNombre.error = getString(R.string.err_campo_vacio)
+                vibrarDispositivo()
                 return@setOnClickListener
             }
 
@@ -133,6 +137,19 @@ class PromedioActivity : AppCompatActivity() {
 
         val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         notificationManager.notify(1, builder.build())
+    }
+
+    private fun vibrarDispositivo() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            val vibratorManager = getSystemService(Context.VIBRATOR_MANAGER_SERVICE) as VibratorManager
+            val vibrator = vibratorManager.defaultVibrator
+            vibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE))
+        } else {
+            @Suppress("DEPRECATION")
+            val vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+            @Suppress("DEPRECATION")
+            vibrator.vibrate(300)
+        }
     }
 
 }
