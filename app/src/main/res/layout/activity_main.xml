@@ -9,25 +9,34 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tittle_principal"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small"
+        android:textSize="@dimen/text_size_title"
+        />
+
     <!--Creacion de Botones principales-->
     <Button
         android:id="@+id/Promediobtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Botón 1" />
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="@string/btn_ejercicio1" />
 
     <Button
         android:id="@+id/Salariobtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Botón 2" />
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="@string/btn_ejercicio2" />
 
     <Button
         android:id="@+id/Calculadorabtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Botón 3" />
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="@string/btn_ejercicio3" />
 </LinearLayout>

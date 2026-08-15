@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">Desafio1_DSM</string>
 
+    <!-- Texto Principal -->
+    <string name="tittle_principal">Bienvenido/a a mi apliación
+    selecciona una de las siguientes opciones </string>
+
     <!-- Textos principales para los botones -->
     <string name="btn_ejercicio1">Ejercicio 1: Promedio</string>
     <string name="btn_ejercicio2">Ejercicio 2: Salario</string>
