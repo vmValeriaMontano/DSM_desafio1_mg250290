@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fondo"
     android:padding="@dimen/padding_standard">
 
     <LinearLayout
@@ -17,6 +18,7 @@
             android:textSize="@dimen/text_size_title"
             android:textStyle="bold"
             android:gravity="center"
+            android:textColor="@color/texto_titulo"
             android:layout_marginBottom="@dimen/margin_medium"/>
 
         <EditText
@@ -46,41 +48,53 @@
                 android:layout_width="@dimen/tamanio_boton_calc"
                 android:layout_height="@dimen/tamanio_boton_calc"
                 android:src="@drawable/suma"
-                android:scaleType="fitCenter"/>
+                android:scaleType="fitCenter"
+                android:backgroundTint="@color/verdecito"
+                android:textColor="@color/texto_botones"/>
             <ImageButton
                 android:id="@+id/btnResta"
                 android:layout_width="@dimen/tamanio_boton_calc"
                 android:layout_height="@dimen/tamanio_boton_calc"
                 android:src="@drawable/resta"
-                android:scaleType="fitCenter"/>
+                android:scaleType="fitCenter"
+                android:backgroundTint="@color/rosita"
+                android:textColor="@color/texto_botones"/>
 
             <ImageButton
                 android:id="@+id/btnMulti"
                 android:layout_width="@dimen/tamanio_boton_calc"
                 android:layout_height="@dimen/tamanio_boton_calc"
                 android:src="@drawable/multiplicacion"
-                android:scaleType="fitCenter"/>
+                android:scaleType="fitCenter"
+                android:backgroundTint="@color/rojito"
+                android:textColor="@color/texto_botones" />
 
             <ImageButton
                 android:id="@+id/btnDiv"
                 android:layout_width="@dimen/tamanio_boton_calc"
                 android:layout_height="@dimen/tamanio_boton_calc"
                 android:src="@drawable/division"
-                android:scaleType="fitCenter"/>
+                android:scaleType="fitCenter"
+                android:backgroundTint="@color/rosita"
+                android:textColor="@color/texto_botones"/>
 
             <ImageButton
                 android:id="@+id/btnExp"
                 android:layout_width="@dimen/tamanio_boton_calc"
                 android:layout_height="@dimen/tamanio_boton_calc"
                 android:src="@drawable/exponente"
-                android:scaleType="fitCenter"/>
+                android:scaleType="fitCenter"
+                android:backgroundTint="@color/verdecito"
+                android:textColor="@color/texto_botones"/>
 
             <ImageButton
                 android:id="@+id/btnRaiz"
                 android:layout_width="@dimen/tamanio_boton_calc"
                 android:layout_height="@dimen/tamanio_boton_calc"
                 android:src="@drawable/raiz"
-                android:scaleType="fitCenter"/>
+                android:scaleType="fitCenter"
+                android:backgroundTint="@color/rojito"
+                android:textColor="@color/texto_botones" />
         </GridLayout>
 
         <TextView
@@ -97,7 +111,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_medium"
-            android:text="@string/btn_ver_historial" />
+            android:text="@string/btn_ver_historial"
+            android:textColor="@color/texto_titulo"
+            android:backgroundTint="@color/ver_historial"
+            />
 
         <TextView
             android:id="@+id/tvHistorialCompleto"
@@ -114,7 +131,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_medium"
             android:layout_marginBottom="@dimen/margin_medium"
-            android:text="@string/btn_volver" />
+            android:text="@string/btn_volver"
+            android:backgroundTint="@color/rosita"/>
 
     </LinearLayout>
 </ScrollView>

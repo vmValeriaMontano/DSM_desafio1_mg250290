@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fondo"
     android:padding="@dimen/padding_standard">
 
     <LinearLayout
@@ -16,7 +17,8 @@
             android:textSize="@dimen/text_size_title"
             android:textStyle="bold"
             android:gravity="center"
-            android:layout_marginBottom="@dimen/margin_medium"/>
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:textColor="@color/texto_titulo"/>
 
         <EditText
             android:id="@+id/etNombre"
@@ -36,7 +38,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/btn_calcular"
-            android:layout_marginTop="@dimen/margin_medium"/>
+            android:layout_marginTop="@dimen/margin_medium"
+            android:backgroundTint="@color/verdecito"
+            android:textColor="@color/texto_titulo"/>
 
         <TextView
             android:id="@+id/tvResultadoPromedio"
@@ -51,7 +55,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/btn_volver"
-            android:layout_marginTop="@dimen/margin_medium"/>
+            android:layout_marginTop="@dimen/margin_medium"
+            android:backgroundTint="@color/rosita"
+            android:textColor="@color/texto_botones"/>
 
     </LinearLayout>
 </ScrollView>

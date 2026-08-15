@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="@color/rosa_pastel"
+    android:background="@color/fondo"
     tools:context=".MainActivity">
 
     <TextView
@@ -28,7 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_medium"
-        android:backgroundTint="@color/rosa_principal"
+        android:backgroundTint="@color/verdecito"
         android:textColor="@color/texto_botones"
         android:text="@string/btn_ejercicio1" />
 
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_medium"
         android:text="@string/btn_ejercicio2"
-        android:backgroundTint="@color/rosa_encendido"
+        android:backgroundTint="@color/rosita"
         android:textColor="@color/texto_botones"/>
 
     <Button
@@ -47,6 +47,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_medium"
         android:text="@string/btn_ejercicio3"
-        android:backgroundTint="@color/magenta_suave"
+        android:backgroundTint="@color/rojito"
         android:textColor="@color/texto_botones" />
 </LinearLayout>
